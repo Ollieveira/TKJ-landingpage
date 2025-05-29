@@ -1,6 +1,8 @@
 import Tag from "../components/Tag";
+import PillarCard from "../components/PillarCard";
 import crownsImage from "../assets/double-icon-tkj.png";
 import background from "../assets/background-gdd.png";
+import gameplayImage from "../assets/background-gameplay.png";
 
 function GDD() {
   return (
@@ -96,6 +98,90 @@ function GDD() {
                 <img src={crownsImage} alt="Crowns" className="w-80 h-auto" />
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      <section
+        id="narrative-background"
+        className="text-white font-sans px-8 py-16"
+      >
+        <div className="max-w-6xl mx-auto space-y-12">
+          {/* Bloco Narrative Background */}
+          <div>
+            <h2 className="text-3xl font-serif font-bold tracking-widest uppercase mb-6">
+              Narrative Background
+            </h2>
+            <p className="text-gray-300 leading-relaxed">
+              In a medieval kingdom ruled by a merciless king, a group of
+              captured jesters is forced to compete for the chance to become the
+              next royal fool and to avoid a darker fate. To win the King’s
+              favor, they must survive a series of chaotic physical challenges,
+              filled with traps, unstable platforms, and constant surprises.
+            </p>
+            <p className="mt-4 text-gray-300 leading-relaxed">
+              While the current version of the game centers on fast-paced
+              competition, future levels will introduce new formats and changing
+              dynamics. Cooperative modes and unexpected twists will be
+              included, expanding the ways players interact and survive in the
+              King's cruel court.
+            </p>
+          </div>
+
+          {/* Bloco Target Audience */}
+          <div>
+            <h2 className="text-3xl font-serif font-bold tracking-widest uppercase mb-6">
+              Target Audience
+            </h2>
+            <ul className="list-disc list-inside space-y-2 text-gray-300 leading-relaxed">
+              <li>
+                Ages 12-30, with a primary focus on teens and young adults who
+                have familiarity with mobile games
+              </li>
+              <li>
+                Groups of friends in the same physical space, especially for
+                short sessions during casual hangouts
+              </li>
+              <li>
+                Fans of indie and party platformer games that combine physical
+                interaction with light strategy
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Seção 2: Imagem de Gameplay */}
+      <section
+        id="gameplay-slideshow"
+        className="h-96 bg-cover bg-center" // Ajuste a altura (h-96) conforme necessário
+        style={{ backgroundImage: `url(${gameplayImage})` }}
+      >
+        <div className="max-w-4xl mx-auto px-8 py-4 h-full flex items-end">
+          <span className="bg-black bg-opacity-50 text-white text-sm px-3 py-1 rounded">
+          </span>
+        </div>
+      </section>
+
+      {/* Seção 3: Core Experience Pillars */}
+      <section id="core-pillars" className="text-white px-8 py-16">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-serif font-bold tracking-widest uppercase mb-12">
+            Core Experience Pillars
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <PillarCard
+              title="Narrative-Driven Chaos"
+              text="The game offers quick and dynamic rounds that keep players engaged. Each match is designed to feel unpredictable, encouraging friendly competition and replayability."
+            />
+            <PillarCard
+              title="Physical Engagement"
+              text="Players interact with the game by tilting, tapping, and moving their phones. This creates a shared physical experience that adds more energy and fun to each gameplay session."
+            />
+            <PillarCard
+              title="Playful & Satirical Tone"
+              text="The game's style is lighthearted and visually expressive. Characters, animations, and environments support a playful atmosphere without distracting from the gameplay."
+            />
           </div>
         </div>
       </section>
