@@ -1,2 +1,24 @@
 @import "tailwindcss";
 
+
+@theme {
+  /* Grays */
+  --color-gray-placeholder: #828282;
+  --color-gray-light: #37353D;
+  --color-gray-background: #242329;
+  --color-gray-dark: #191515;
+
+  /* Texts */
+  --color-text-main: #E3DDD3;
+  --color-text-main-dark: #CEC1AC;
+  --color-text-secondary: #DEDEDE;
+
+  /* Yellow */
+  --color-yellow: #FF9E28;
+
+  /* Reds */
+  --color-red-main-light: #BA2A14;
+  --color-red-main-dark: #8E0F0F;
+  --color-red-secondary-light: #521111;
+  --color-red-secondary-dark: #2E0606;
+}

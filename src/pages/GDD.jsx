@@ -1,19 +1,25 @@
 import Tag from "../components/Tag";
 import PillarCard from "../components/PillarCard";
+import FeatureHighlight from '../components/FeatureHighlight';
 import crownsImage from "../assets/double-icon-tkj.png";
 import background from "../assets/background-gdd.png";
 import gameplayImage from "../assets/background-gameplay.png";
 
 function GDD() {
   return (
-    <main className="bg-zinc-800">
+    <main>
+      {/* Seção 0: Banner */}
       <section
         id="title-banner"
         className="h-screen bg-cover bg-center overflow-hidden flex items-center justify-center"
         style={{ backgroundImage: `url(${background})` }}
       ></section>
 
-      <section id="game-overview" className="text-white font-sans px-8 py-16">
+      {/* Seção 1: Game Overview */}
+      <section
+        id="game-overview"
+        className="bg-gray-background text-text-secondary font-sans px-8 py-16" // Fundo gray-background
+      >
         <div className="max-w-6xl mx-auto">
           <div>
             <h2 className="text-4xl font-serif font-bold tracking-widest uppercase mb-6">
@@ -36,8 +42,17 @@ function GDD() {
               </p>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div className="mt-20">
+      {/* Seção 2: App Informations */}
+      <section
+        id="app-informations" // ID para a nova seção
+        className="bg-gray-dark text-text-secondary font-sans px-8 py-16" // Fundo gray-dark
+      >
+        <div className="max-w-6xl mx-auto">
+          {/* A div que antes tinha mt-20 agora não precisa, pois a seção tem py-16 */}
+          <div>
             <h2 className="text-3xl font-serif font-bold mb-8 tracking-wider">
               app informations
             </h2>
@@ -45,7 +60,7 @@ function GDD() {
             <div className="flex items-start gap-x-16">
               <div className="space-y-4 flex-1">
                 <div className="flex items-center space-x-4">
-                  <p className="font-bold text-lg text-gray-400 w-32">
+                  <p className="font-bold text-lg text-text-secondary w-32">
                     Platform:
                   </p>
                   <div className="flex gap-2">
@@ -55,7 +70,9 @@ function GDD() {
                 </div>
 
                 <div className="flex items-center space-x-4">
-                  <p className="font-bold text-lg text-gray-400 w-32">Genre:</p>
+                  <p className="font-bold text-lg text-text-secondary w-32">
+                    Genre:
+                  </p>
                   <div className="flex gap-2 flex-wrap">
                     <Tag text="Party Game" />
                     <Tag text="Action" />
@@ -65,7 +82,7 @@ function GDD() {
                 </div>
 
                 <div className="flex items-center space-x-4">
-                  <p className="font-bold text-lg text-gray-400 w-32">
+                  <p className="font-bold text-lg text-text-secondary w-32">
                     Game Modes:
                   </p>
                   <div className="flex gap-2">
@@ -75,7 +92,7 @@ function GDD() {
                 </div>
 
                 <div className="flex items-center space-x-4">
-                  <p className="font-bold text-lg text-gray-400 w-32">
+                  <p className="font-bold text-lg text-text-secondary w-32">
                     Level Duration:
                   </p>
                   <div className="flex gap-2">
@@ -84,7 +101,9 @@ function GDD() {
                 </div>
 
                 <div className="flex items-center space-x-4">
-                  <p className="font-bold text-lg text-gray-400 w-32">Tools:</p>
+                  <p className="font-bold text-lg text-text-secondary w-32">
+                    Tools:
+                  </p>
                   <div className="flex gap-2 flex-wrap">
                     <Tag text="SwiftUI" />
                     <Tag text="SpriteKit" />
@@ -101,9 +120,11 @@ function GDD() {
           </div>
         </div>
       </section>
+
+      {/* Seção 3: Narrative Background */}
       <section
         id="narrative-background"
-        className="text-white font-sans px-8 py-16"
+        className="bg-gray-background text-text-secondary font-sans px-8 py-16"
       >
         <div className="max-w-6xl mx-auto space-y-12">
           {/* Bloco Narrative Background */}
@@ -111,14 +132,14 @@ function GDD() {
             <h2 className="text-3xl font-serif font-bold tracking-widest uppercase mb-6">
               Narrative Background
             </h2>
-            <p className="text-gray-300 leading-relaxed">
+            <p className="text-text-secondary leading-relaxed">
               In a medieval kingdom ruled by a merciless king, a group of
               captured jesters is forced to compete for the chance to become the
               next royal fool and to avoid a darker fate. To win the King’s
               favor, they must survive a series of chaotic physical challenges,
               filled with traps, unstable platforms, and constant surprises.
             </p>
-            <p className="mt-4 text-gray-300 leading-relaxed">
+            <p className="mt-4 text-text-secondary leading-relaxed">
               While the current version of the game centers on fast-paced
               competition, future levels will introduce new formats and changing
               dynamics. Cooperative modes and unexpected twists will be
@@ -150,20 +171,18 @@ function GDD() {
         </div>
       </section>
 
-      {/* Seção 2: Imagem de Gameplay */}
+      {/* Seção 4: Imagem de Gameplay */}
       <section
         id="gameplay-slideshow"
         className="h-96 bg-cover bg-center" // Ajuste a altura (h-96) conforme necessário
         style={{ backgroundImage: `url(${gameplayImage})` }}
-      >
-        <div className="max-w-4xl mx-auto px-8 py-4 h-full flex items-end">
-          <span className="bg-black bg-opacity-50 text-white text-sm px-3 py-1 rounded">
-          </span>
-        </div>
-      </section>
+      ></section>
 
-      {/* Seção 3: Core Experience Pillars */}
-      <section id="core-pillars" className="text-white px-8 py-16">
+      {/* Seção 5: Core Experience Pillars */}
+      <section
+        id="core-pillars"
+        className="bg-red-secondary-dark text-text-main px-8 py-16"
+      >
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-serif font-bold tracking-widest uppercase mb-12">
             Core Experience Pillars
@@ -181,6 +200,34 @@ function GDD() {
             <PillarCard
               title="Playful & Satirical Tone"
               text="The game's style is lighthearted and visually expressive. Characters, animations, and environments support a playful atmosphere without distracting from the gameplay."
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Seção 6: Key Features */}
+      <section id="key-features" className="bg-red-secondary-dark px-8 py-16">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-text-main text-4xl font-serif font-bold tracking-widest uppercase mb-12">
+            key features
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-10">
+            <FeatureHighlight
+              title="Fast-Paced Motion-Based Gameplay"
+              description="Players control jesters by tilting and tapping their phones, creating a highly active and kinetic form of interaction that heightens the chaos and immersion of each match."
+            />
+            <FeatureHighlight
+              title="Short, Replayable Matches"
+              description="The current singular level is designed to be quick and intense, encouraging rematches, revenge rounds, and escalating tension. It’s a perfect format for casual play sessions and chaotic fun."
+            />
+            <FeatureHighlight
+              title="Local Multiplayer via Proximity Connection"
+              description="Using Apple’s Multipeer Connectivity, the game allows players to quickly connect without needing a network, perfect for spontaneous, in-person parties or classroom sessions."
+            />
+            <FeatureHighlight
+              title="Expandable Level System"
+              description="The demo currently includes one stage, but the structure supports new levels with different rules, mechanics, and objectives, allowing the game to grow in complexity and variety over time."
             />
           </div>
         </div>

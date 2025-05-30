@@ -1,28 +1,30 @@
+// tailwind.config.js
+
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
+        // Agora referenciamos as variáveis CSS que criamos
         gray: {
-          placeholder: "#828282",
-          light: "#37353D",
-          background: "#242329",
-          dark: "#191515",
+          placeholder: 'var(--color-gray-placeholder)',
+          light: 'var(--color-gray-light)',
+          background: 'var(--color-gray-background)',
+          dark: 'var(--color-gray-dark)',
         },
         text: {
-          main: "#E3DDD3",
-          "main-dark": "#CEC1AC",
-          secondary: "#DEDEDE",
+          main: 'var(--color-text-main)',
+          'main-dark': 'var(--color-text-main-dark)',
+          secondary: 'var(--color-text-secondary)',
         },
-        yellow: {
-          DEFAULT: "#FF9E28",
-        },
+        // Para o amarelo, podemos usar a variável diretamente
+        yellow: 'var(--color-yellow)',
         red: {
-          "main-light": "#BA2A14",
-          "main-dark": "#8E0F0F",
-          "secondary-light": "#521111",
-          "secondary-dark": "#2E0606",
-        },
+          'main-light': 'var(--color-red-main-light)',
+          'main-dark': 'var(--color-red-main-dark)',
+          'secondary-light': 'var(--color-red-secondary-light)',
+          'secondary-dark': 'var(--color-red-secondary-dark)',
+        }
       },
     },
   },

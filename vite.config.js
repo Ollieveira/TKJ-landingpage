@@ -1,8 +1,16 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
+import tailwindcss from '@tailwindcss/postcss' // <--- Importe o novo pacote
+import autoprefixer from 'autoprefixer'       // <--- Importe o autoprefixer
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
+  plugins: [react()],
+  css: { // <--- Adicione toda esta seção 'css'
+    postcss: {
+      plugins: [
+        tailwindcss,
+        autoprefixer,
+      ],
+    },
+  },
 })
