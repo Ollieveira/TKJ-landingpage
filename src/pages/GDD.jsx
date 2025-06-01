@@ -1,6 +1,6 @@
 import Tag from "../components/Tag";
 import PillarCard from "../components/PillarCard";
-import FeatureHighlight from '../components/FeatureHighlight';
+import FeatureHighlight from "../components/FeatureHighlight";
 import crownsImage from "../assets/double-icon-tkj.png";
 import background from "../assets/background-gdd.png";
 import gameplayImage from "../assets/background-gameplay.png";
@@ -232,6 +232,81 @@ function GDD() {
           </div>
         </div>
       </section>
+
+      {/* Seção 7: Gameplay Loop */}
+      <section id="gameplay-loop" className="bg-gray-background px-8 py-16">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-text-main text-4xl font-serif font-bold tracking-widest uppercase mb-16">
+            Gameplay loop
+          </h2>
+
+          <div className="relative">
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-gray-background rounded-full z-10"></div>
+
+            <div className="grid grid-cols-2 gap-8">
+              {/* Card 1 */}
+              <div className="bg-red-main-light flex rounded-tl-2xl min-h-[200px] p-8 items-center justify-center">
+                <div className="flex items-start">
+                  <p className="text-6xl font-bold text-red-secondary-light mr-4">
+                    1
+                  </p>
+                  <p className="text-text-main font-sans leading-relaxed text-pretty">
+                    Players connect with each other via proximity-based
+                    connectivity. One player creates the room and takes on the
+                    role of the host, while other players can request to join
+                    the party.
+                  </p>
+                </div>
+              </div>
+
+              {/* Card 2 */}
+              <div className="bg-red-main-light flex rounded-tr-2xl min-h-[200px] p-8 items-center justify-center">
+                <div className="flex items-start">
+                  <p className="text-6xl font-bold text-red-secondary-light mr-4">
+                    2
+                  </p>
+                  <p className="text-text-main font-sans leading-relaxed text-pretty">
+                    The game begins once all players are connected. Each player
+                    controls a jester on the playing field, using the phone's
+                    motion sensors (accelerometer and gyroscope) to move their
+                    character.
+                  </p>
+                </div>
+              </div>
+
+              {/* Card 3 */}
+              <div className="bg-red-main-light flex rounded-bl-2xl min-h-[200px] p-8 items-center justify-center">
+                <div className="flex items-start">
+                  <p className="text-6xl font-bold text-red-secondary-light mr-4">
+                    3
+                  </p>
+                  <p className="text-text-main font-sans leading-relaxed text-pretty">
+                    During the round, players must navigate a series of traps,
+                    unstable platforms, and unpredictable obstacles, all while
+                    competing for survival.
+                  </p>
+                </div>
+              </div>
+
+              {/* Card 4 */}
+              <div className="bg-red-main-light flex rounded-br-2xl min-h-[200px] p-8 items-center justify-center">
+                <div className="flex items-start">
+                  <p className="text-6xl font-bold text-red-secondary-light mr-4">
+                    4
+                  </p>
+                  <p className="text-text-main font-sans leading-relaxed text-pretty">
+                    The first jester to reach the dungeon exit receives the
+                    King's approval. Afterward, players can choose to play
+                    another round or end the session.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
     </main>
   );
 }
