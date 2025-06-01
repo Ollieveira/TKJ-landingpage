@@ -1,6 +1,7 @@
 import Tag from "../components/Tag";
 import PillarCard from "../components/PillarCard";
 import FeatureHighlight from "../components/FeatureHighlight";
+import ColorSwatch from "../components/ColorSwatch";
 import crownsImage from "../assets/double-icon-tkj.png";
 import background from "../assets/background-gdd.png";
 import gameplayImage from "../assets/background-gameplay.png";
@@ -306,7 +307,121 @@ function GDD() {
         </div>
       </section>
 
-      
+      {/* Seção 8: Visual Identity */}
+      <section
+        id="visual-identity-text"
+        className="bg-gray-background px-8 py-16"
+      >
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-text-main text-4xl font-serif font-bold tracking-widest uppercase mb-6">
+            visual identity
+          </h2>
+          <div className="space-y-6 text-text-secondary leading-relaxed text-pretty">
+            <p>
+              The visual identity of The King’s Jest, specifically in the main
+              menu and all non-gameplay interface screens, was designed with a
+              blend of medieval references and stylistic influences from woodcut
+              printing. This aesthetic frames the game as a satirical relic from
+              a chaotic royal court.
+            </p>
+            <p>
+              The color palette combines shades of grey and beige with
+              high-contrast reds and yellows. These colors were selected to
+              evoke intensity and urgency, while still grounding the visuals in
+              a vintage, storybook-like atmosphere.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Seção 8: Color Palette */}
+      <section id="color-palette" className="bg-gray-dark">
+        <div className="grid grid-cols-1 md:grid-cols-3">
+          
+          {/* --- COLUNA 1 --- */}
+          <div>
+            <ColorSwatch
+              heightClass="h-[346px]" 
+              colorName="Linen Beige"
+              hexCode="#E3DDD3"
+              bgColorClass="bg-text-main"
+              textColorClass="text-gray-dark"
+            />
+            <div className="grid grid-cols-2">
+              <ColorSwatch
+                heightClass="h-40" 
+                colorName="Royal Gold"
+                hexCode="#FF9E28"
+                bgColorClass="bg-yellow"
+                textColorClass="text-gray-dark"
+              />
+              <ColorSwatch
+                heightClass="h-40" 
+                colorName="Parchment Beige"
+                hexCode="#CEC1AC"
+                bgColorClass="bg-text-main-dark"
+                textColorClass="text-gray-dark"
+              />
+            </div>
+          </div>
+
+          {/* --- COLUNA 2 --- */}
+          <div>
+            <ColorSwatch
+              heightClass="h-[346px]" 
+              colorName="Infernal Red"
+              hexCode="#BA2A14"
+              bgColorClass="bg-red-main-light"
+            />
+            <div className="grid grid-cols-3">
+              <ColorSwatch
+                heightClass="h-40" 
+                colorName="Ember Core"
+                hexCode="#8E0F0F"
+                bgColorClass="bg-red-main-dark"
+              />
+              <ColorSwatch
+                heightClass="h-40" 
+                colorName="Scorched Woe"
+                hexCode="#521111"
+                bgColorClass="bg-red-secondary-light"
+              />
+              <ColorSwatch
+                heightClass="h-40" 
+                colorName="Coal Ash"
+                hexCode="#2E0606"
+                bgColorClass="bg-red-secondary-dark"
+              />
+            </div>
+          </div>
+
+          {/* --- COLUNA 3 --- */}
+          <div>
+            <ColorSwatch
+              heightClass="h-[346px]" 
+              colorName="Stone Gray"
+              hexCode="#37353D"
+              bgColorClass="bg-gray-light"
+            />
+            <div className="grid grid-cols-2">
+              <ColorSwatch
+                heightClass="h-40" 
+                colorName="Dungeon Gray"
+                hexCode="#242329"
+                bgColorClass="bg-gray-background"
+              />
+              <ColorSwatch
+                heightClass="h-40" 
+                colorName="Midnight Black"
+                hexCode="#191515"
+                bgColorClass="bg-gray-dark"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+
     </main>
   );
 }
