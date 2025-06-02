@@ -7,6 +7,11 @@ import background from "../assets/background-gdd.png";
 import gameplayImage from "../assets/background-gameplay.png";
 import uiDesignImage from "../assets/background-gdd-section11.png";
 import designSystemImage from "../assets/game-components.png";
+import jesterHeadImage from "../assets/jesterHeadImage.png";
+import idleJester from "../assets/idle.gif";
+import runJester from "../assets/run.gif";
+import jumpJester from "../assets/jump.gif";
+import deathJester from "../assets/death.gif";
 
 function GDD() {
   return (
@@ -473,6 +478,82 @@ function GDD() {
             alt="Design system do jogo The King's Jest"
             className="w-full h-auto rounded-2xl"
           />
+        </div>
+      </section>
+
+      {/* Seção 13: Visual Direction */}
+      <section
+        id="visual-direction"
+        className="bg-gray-background text-text-secondary px-8 py-16 relative"
+      >
+        <div className="max-w-6xl mx-auto ">
+          <h2 className="text-text-main text-4xl font-serif font-bold tracking-widest uppercase mb-6">
+            in-game visual direction
+          </h2>
+          <div className="space-y-6 leading-relaxed text-pretty">
+            <p>
+              The in-game visual style of The King’s Jest was developed to
+              visually reinforce the chaotic humor and twisted lore of the
+              King’s challenges. Every element, from backgrounds to characters,
+              was designed to feel like a story unfolding through imagery, with
+              environments and animations working together to build a coherent,
+              expressive world.
+            </p>
+            <div>
+              <p>
+                We chose pixel art as the core visual language for several
+                reasons:
+              </p>
+              <ul className="list-disc list-inside space-y-2 mt-4">
+                <li>
+                  It suited the technical constraints of developing a 2D mobile
+                  game within a short three-month timeframe;
+                </li>
+                <li>
+                  It evokes the nostalgic feel of classic games, while being
+                  flexible enough for modern reinterpretation;
+                </li>
+                <li>
+                  It naturally complements the frantic, fast-paced rhythm of
+                  platforming gameplay.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <img
+            src={jesterHeadImage}
+            alt="Jester Head Icon"
+            className="absolute bottom-0 right-50 w-24 h-auto"
+          />
+        </div>
+      </section>
+
+      {/* Seção 14: Character Animations */}
+      <section id="character-animations" className="bg-gray-dark px-8 py-20">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex items-center justify-between">
+            <img
+              src={idleJester}
+              alt="Animação do personagem idle"
+              className="h-48 w-auto"
+            />
+            <img
+              src={runJester}
+              alt="Animação do personagem correndo"
+              className="h-48 w-auto"
+            />
+            <img
+              src={jumpJester}
+              alt="Animação do personagem pulando"
+              className="h-48 w-auto"
+            />
+            <img
+              src={deathJester}
+              alt="Animação do personagem morrendo"
+              className="h-40 w-auto"
+            />
+          </div>
         </div>
       </section>
     </main>
