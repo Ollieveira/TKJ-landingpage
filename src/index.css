@@ -1,24 +1,31 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "LibraMN";
+  src: url("../fonts/libra-mn.ttf");
+}
 
 @theme {
+  /* Fonts */
+  --font-libra: LibraMN, "sans-serif";
+
   /* Grays */
   --color-gray-placeholder: #828282;
-  --color-gray-light: #37353D;
+  --color-gray-light: #37353d;
   --color-gray-background: #242329;
   --color-gray-dark: #191515;
 
   /* Texts */
-  --color-text-main: #E3DDD3;
-  --color-text-main-dark: #CEC1AC;
-  --color-text-secondary: #DEDEDE;
+  --color-text-main: #e3ddd3;
+  --color-text-main-dark: #cec1ac;
+  --color-text-secondary: #dedede;
 
   /* Yellow */
-  --color-yellow: #FF9E28;
+  --color-yellow: #ff9e28;
 
   /* Reds */
-  --color-red-main-light: #BA2A14;
-  --color-red-main-dark: #8E0F0F;
+  --color-red-main-light: #ba2a14;
+  --color-red-main-dark: #8e0f0f;
   --color-red-secondary-light: #521111;
-  --color-red-secondary-dark: #2E0606;
+  --color-red-secondary-dark: #2e0606;
 }

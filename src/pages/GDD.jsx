@@ -33,10 +33,10 @@ function GDD() {
       >
         <div className="max-w-6xl mx-auto">
           <div>
-            <h2 className="text-4xl font-serif font-bold tracking-widest uppercase mb-6">
+            <h2 className="font-libra text-4xl text-text-secondary tracking-widest mb-6">
               Game Overview
             </h2>
-            <div className="space-y-6 text-gray-300 leading-relaxed">
+            <div className="space-y-6 text-text-secondary leading-relaxed">
               <p>
                 The King’s Jest is a local multiplayer party game developed as
                 part of a limited-time challenge. The objective was to create an
@@ -58,75 +58,71 @@ function GDD() {
 
       {/* Seção 2: App Informations */}
       <section
-        id="app-informations" // ID para a nova seção
-        className="bg-gray-dark text-text-secondary font-sans px-8 py-16" // Fundo gray-dark
+        id="app-informations"
+        className="bg-gray-dark text-text-secondary font-sans px-8 py-16"
       >
         <div className="max-w-6xl mx-auto">
-          {/* A div que antes tinha mt-20 agora não precisa, pois a seção tem py-16 */}
-          <div>
-            <h2 className="text-3xl font-serif font-bold mb-8 tracking-wider">
-              app informations
-            </h2>
+          <h2 className="text-4xl font-libra text-text-secondary mb-8 tracking-wider">
+            app informations
+          </h2>
 
-            <div className="flex items-start gap-x-16">
-              <div className="space-y-4 flex-1">
-                <div className="flex items-center space-x-4">
-                  <p className="font-bold text-lg text-text-secondary w-32">
-                    Platform:
-                  </p>
-                  <div className="flex gap-2">
-                    <Tag text="iOS" />
-                    <Tag text="Mobile" />
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-4">
-                  <p className="font-bold text-lg text-text-secondary w-32">
-                    Genre:
-                  </p>
-                  <div className="flex gap-2 flex-wrap">
-                    <Tag text="Party Game" />
-                    <Tag text="Action" />
-                    <Tag text="2D Platformer" />
-                    <Tag text="Local Multiplayer" />
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-4">
-                  <p className="font-bold text-lg text-text-secondary w-32">
-                    Game Modes:
-                  </p>
-                  <div className="flex gap-2">
-                    <Tag text="2-8 Players" />
-                    <Tag text="Single Player" />
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-4">
-                  <p className="font-bold text-lg text-text-secondary w-32">
-                    Level Duration:
-                  </p>
-                  <div className="flex gap-2">
-                    <Tag text="2-3 min per round" />
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-4">
-                  <p className="font-bold text-lg text-text-secondary w-32">
-                    Tools:
-                  </p>
-                  <div className="flex gap-2 flex-wrap">
-                    <Tag text="SwiftUI" />
-                    <Tag text="SpriteKit" />
-                    <Tag text="Multipeer Conectivity" />
-                    <Tag text="Core Motion" />
-                  </div>
+          <div className="flex items-center">
+            <div className="space-y-4 flex-1">
+              <div className="flex flex-col items-start sm:flex-row sm:items-center gap-2">
+                <p className="font-bold text-lg text-text-secondary w-full sm:w-auto">
+                  Platform:
+                </p>
+                <div className="flex gap-2 flex-wrap">
+                  <Tag text="iOS" />
+                  <Tag text="Mobile" />
                 </div>
               </div>
 
-              <div>
-                <img src={crownsImage} alt="Crowns" className="w-80 h-auto" />
+              <div className="flex flex-col items-start sm:flex-row sm:items-center gap-2">
+                <p className="font-bold text-lg text-text-secondary w-full sm:w-auto">
+                  Genre:
+                </p>
+                <div className="flex gap-2 flex-wrap">
+                  <Tag text="Party Game" />
+                  <Tag text="Action" />
+                  <Tag text="2D Platformer" />
+                  <Tag text="Local Multiplayer" />
+                </div>
               </div>
+
+              <div className="flex flex-col items-start sm:flex-row sm:items-center gap-2">
+                <p className="font-bold text-lg text-text-secondary w-full sm:w-auto">
+                  Game Modes:
+                </p>
+                <div className="flex gap-2 flex-wrap">
+                  <Tag text="2-8 Players" />
+                  <Tag text="Single Player" />
+                </div>
+              </div>
+
+              <div className="flex flex-col items-start sm:flex-row sm:items-center gap-2">
+                <p className="font-bold text-lg text-text-secondary w-full sm:w-auto">
+                  Level Duration:
+                </p>
+                <div className="flex gap-2 flex-wrap">
+                  <Tag text="2-3 min per round" />
+                </div>
+              </div>
+
+              <div className="flex flex-col items-start sm:flex-row sm:items-center gap-2">
+                <p className="font-bold text-lg text-text-secondary w-full sm:w-auto">
+                  Tools:
+                </p>
+                <div className="flex gap-2 flex-wrap">
+                  <Tag text="SwiftUI" />
+                  <Tag text="SpriteKit" />
+                  <Tag text="Multipeer Conectivity" />
+                  <Tag text="Core Motion" />
+                </div>
+              </div>
+            </div>
+            <div>
+              <img src={crownsImage} alt="Crowns" className="w-80 h-auto" />
             </div>
           </div>
         </div>
@@ -138,9 +134,8 @@ function GDD() {
         className="bg-gray-background text-text-secondary font-sans px-8 py-16"
       >
         <div className="max-w-6xl mx-auto space-y-12">
-          {/* Bloco Narrative Background */}
           <div>
-            <h2 className="text-3xl font-serif font-bold tracking-widest uppercase mb-6">
+            <h2 className="font-libra text-4xl text-text-secondary tracking-widest mb-6">
               Narrative Background
             </h2>
             <p className="text-text-secondary leading-relaxed">
@@ -159,12 +154,11 @@ function GDD() {
             </p>
           </div>
 
-          {/* Bloco Target Audience */}
           <div>
-            <h2 className="text-3xl font-serif font-bold tracking-widest uppercase mb-6">
+            <h2 className="font-libra text-4xl text-text-secondary tracking-widest mb-6">
               Target Audience
             </h2>
-            <ul className="list-disc list-inside space-y-2 text-gray-300 leading-relaxed">
+            <ul className="list-disc list-inside space-y-2 text-text-secondary leading-relaxed">
               <li>
                 Ages 12-30, with a primary focus on teens and young adults who
                 have familiarity with mobile games
@@ -195,7 +189,7 @@ function GDD() {
         className="bg-red-secondary-dark text-text-main px-8 py-16"
       >
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-serif font-bold tracking-widest uppercase mb-12">
+          <h2 className="font-libra text-4xl text-text-main tracking-widest mb-12">
             Core Experience Pillars
           </h2>
 
@@ -219,7 +213,7 @@ function GDD() {
       {/* Seção 6: Key Features */}
       <section id="key-features" className="bg-red-secondary-dark px-8 py-16">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-text-main text-4xl font-serif font-bold tracking-widest uppercase mb-12">
+          <h2 className="text-text-main font-libra text-4xl tracking-widest mb-12">
             key features
           </h2>
 
@@ -247,7 +241,7 @@ function GDD() {
       {/* Seção 7: Gameplay Loop */}
       <section id="gameplay-loop" className="bg-gray-background px-8 py-16">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-text-main text-4xl font-serif font-bold tracking-widest uppercase mb-16">
+          <h2 className="font-libra text-4xl text-text-secondary tracking-widest mb-16">
             Gameplay loop
           </h2>
 
@@ -323,7 +317,7 @@ function GDD() {
         className="bg-gray-background px-8 py-16"
       >
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-text-main text-4xl font-serif font-bold tracking-widest uppercase mb-6">
+          <h2 className="font-libra text-4xl text-text-secondary tracking-widest mb-6">
             visual identity
           </h2>
           <div className="space-y-6 text-text-secondary leading-relaxed text-pretty">
@@ -436,7 +430,7 @@ function GDD() {
         className="bg-gray-dark text-text-secondary px-8 py-16"
       >
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-text-main text-4xl font-serif font-bold tracking-widest uppercase mb-6">
+          <h2 className="font-libra text-4xl text-text-secondary tracking-widest mb-6">
             ui design
           </h2>
           <div className="space-y-6 leading-relaxed text-pretty">
@@ -472,7 +466,7 @@ function GDD() {
       {/* Seção 12: Design System */}
       <section id="design-system" className="bg-gray-background px-8 py-16">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-text-main text-4xl font-serif font-bold tracking-widest uppercase mb-12">
+          <h2 className="font-libra text-4xl text-text-secondary tracking-widest mb-12">
             design system
           </h2>
 
@@ -487,13 +481,13 @@ function GDD() {
       {/* Seção 13: Visual Direction */}
       <section
         id="visual-direction"
-        className="bg-gray-background text-text-secondary px-8 py-16 relative"
+        className="bg-gray-background text-text-secondary px-8 py-16"
       >
-        <div className="max-w-6xl mx-auto ">
-          <h2 className="text-text-main text-4xl font-serif font-bold tracking-widest uppercase mb-6">
+        <div className="max-w-6xl mx-auto relative">
+          <h2 className="font-libra text-4xl text-text-secondary tracking-widest mb-6">
             in-game visual direction
           </h2>
-          <div className="space-y-6 leading-relaxed text-pretty">
+          <div className="space-y-6 text-text-secondary leading-relaxed text-pretty">
             <p>
               The in-game visual style of The King’s Jest was developed to
               visually reinforce the chaotic humor and twisted lore of the
@@ -527,7 +521,7 @@ function GDD() {
           <img
             src={jesterHeadImage}
             alt="Jester Head Icon"
-            className="absolute bottom-0 right-50 w-24 h-auto"
+            className="absolute -bottom-17 right-0 w-24 h-auto"
           />
         </div>
       </section>
@@ -535,26 +529,26 @@ function GDD() {
       {/* Seção 14: Character Animations */}
       <section id="character-animations" className="bg-gray-dark px-8 py-20">
         <div className="max-w-6xl mx-auto">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between gap-4">
             <img
               src={idleJester}
               alt="Animação do personagem idle"
-              className="h-48 w-auto"
+              className="flex-1 min-w-0 aspect-[1/1] object-contain max-w-48 md:max-w-xs"
             />
             <img
               src={runJester}
               alt="Animação do personagem correndo"
-              className="h-48 w-auto"
+              className="flex-1 min-w-0 aspect-[1/1] object-contain max-w-48 md:max-w-xs"
             />
             <img
               src={jumpJester}
               alt="Animação do personagem pulando"
-              className="h-48 w-auto"
+              className="flex-1 min-w-0 aspect-[1/1] object-contain max-w-48 md:max-w-xs"
             />
             <img
               src={deathJester}
               alt="Animação do personagem morrendo"
-              className="h-40 w-auto"
+              className="flex-1 min-w-0 aspect-[1/1] object-contain max-w-48 md:max-w-xs"
             />
           </div>
         </div>
