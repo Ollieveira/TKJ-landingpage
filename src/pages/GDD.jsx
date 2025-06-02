@@ -12,6 +12,7 @@ import idleJester from "../assets/idle.gif";
 import runJester from "../assets/run.gif";
 import jumpJester from "../assets/jump.gif";
 import deathJester from "../assets/death.gif";
+import finalSceneImage from "../assets/finalSceneImage.png";
 
 function GDD() {
   return (
@@ -19,9 +20,11 @@ function GDD() {
       {/* Seção 0: Banner */}
       <section
         id="title-banner"
-        className="w-full aspect-[16/7] bg-cover bg-center"
+        className="w-full aspect-[16/7] bg-cover bg-center relative"
         style={{ backgroundImage: `url(${background})` }}
-      ></section>
+      >
+        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-gray-background to-transparent"></div>
+      </section>
 
       {/* Seção 1: Game Overview */}
       <section
@@ -555,6 +558,41 @@ function GDD() {
             />
           </div>
         </div>
+      </section>
+
+      {/* Seção 15: Visual Identity Details */}
+      <section
+        id="visual-identity-details"
+        className="bg-gray-background text-text-secondary px-8 py-16"
+      >
+        <div className="max-w-6xl mx-auto">
+          <div className="space-y-6 leading-relaxed text-pretty">
+            <p>
+              This stylistic choice also allowed us to match the aesthetic and
+              technical qualities of the characters and scenarios. Each jester
+              character was crafted to visually "belong" in their environment,
+              both in color treatment and animation, making the chaos feel
+              cohesive rather than overwhelming.
+            </p>
+            <p>
+              We are already working to expand the visual storytelling of future
+              levels while maintaining the game’s satirical and carnivalesque
+              tone. The world of The King’s Jest thrives on visual irony,
+              exaggerated characters, and "joyful chaos"; a vibrant mix of
+              personality and color that keeps the world alive, even as players
+              face danger at every turn.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Seção 16: Final Showcase */}
+      <section
+        id="final-showcase"
+        className="w-full aspect-[16/8] bg-cover bg-bottom relative"
+        style={{ backgroundImage: `url(${finalSceneImage})` }}
+      >
+        <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-gray-background to-transparent"></div>
       </section>
     </main>
   );
