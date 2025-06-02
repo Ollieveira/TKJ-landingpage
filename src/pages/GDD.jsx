@@ -5,6 +5,7 @@ import ColorSwatch from "../components/ColorSwatch";
 import crownsImage from "../assets/double-icon-tkj.png";
 import background from "../assets/background-gdd.png";
 import gameplayImage from "../assets/background-gameplay.png";
+import uiDesignImage from "../assets/background-gdd-section11.png";
 
 function GDD() {
   return (
@@ -12,7 +13,7 @@ function GDD() {
       {/* Seção 0: Banner */}
       <section
         id="title-banner"
-        className="h-screen bg-cover bg-center overflow-hidden flex items-center justify-center"
+        className="w-full aspect-[16/7] bg-cover bg-center"
         style={{ backgroundImage: `url(${background})` }}
       ></section>
 
@@ -175,7 +176,7 @@ function GDD() {
       {/* Seção 4: Imagem de Gameplay */}
       <section
         id="gameplay-slideshow"
-        className="h-96 bg-cover bg-center" // Ajuste a altura (h-96) conforme necessário
+        className="w-full aspect-[3/1] bg-cover bg-center"
         style={{ backgroundImage: `url(${gameplayImage})` }}
       ></section>
 
@@ -334,14 +335,13 @@ function GDD() {
         </div>
       </section>
 
-      {/* Seção 8: Color Palette */}
+      {/* Seção 9: Color Palette */}
       <section id="color-palette" className="bg-gray-dark">
         <div className="grid grid-cols-1 md:grid-cols-3">
-          
           {/* --- COLUNA 1 --- */}
           <div>
             <ColorSwatch
-              heightClass="h-[346px]" 
+              heightClass="h-[346px]"
               colorName="Linen Beige"
               hexCode="#E3DDD3"
               bgColorClass="bg-text-main"
@@ -349,14 +349,14 @@ function GDD() {
             />
             <div className="grid grid-cols-2">
               <ColorSwatch
-                heightClass="h-40" 
+                heightClass="h-40"
                 colorName="Royal Gold"
                 hexCode="#FF9E28"
                 bgColorClass="bg-yellow"
                 textColorClass="text-gray-dark"
               />
               <ColorSwatch
-                heightClass="h-40" 
+                heightClass="h-40"
                 colorName="Parchment Beige"
                 hexCode="#CEC1AC"
                 bgColorClass="bg-text-main-dark"
@@ -368,26 +368,26 @@ function GDD() {
           {/* --- COLUNA 2 --- */}
           <div>
             <ColorSwatch
-              heightClass="h-[346px]" 
+              heightClass="h-[346px]"
               colorName="Infernal Red"
               hexCode="#BA2A14"
               bgColorClass="bg-red-main-light"
             />
             <div className="grid grid-cols-3">
               <ColorSwatch
-                heightClass="h-40" 
+                heightClass="h-40"
                 colorName="Ember Core"
                 hexCode="#8E0F0F"
                 bgColorClass="bg-red-main-dark"
               />
               <ColorSwatch
-                heightClass="h-40" 
+                heightClass="h-40"
                 colorName="Scorched Woe"
                 hexCode="#521111"
                 bgColorClass="bg-red-secondary-light"
               />
               <ColorSwatch
-                heightClass="h-40" 
+                heightClass="h-40"
                 colorName="Coal Ash"
                 hexCode="#2E0606"
                 bgColorClass="bg-red-secondary-dark"
@@ -398,20 +398,20 @@ function GDD() {
           {/* --- COLUNA 3 --- */}
           <div>
             <ColorSwatch
-              heightClass="h-[346px]" 
+              heightClass="h-[346px]"
               colorName="Stone Gray"
               hexCode="#37353D"
               bgColorClass="bg-gray-light"
             />
             <div className="grid grid-cols-2">
               <ColorSwatch
-                heightClass="h-40" 
+                heightClass="h-40"
                 colorName="Dungeon Gray"
                 hexCode="#242329"
                 bgColorClass="bg-gray-background"
               />
               <ColorSwatch
-                heightClass="h-40" 
+                heightClass="h-40"
                 colorName="Midnight Black"
                 hexCode="#191515"
                 bgColorClass="bg-gray-dark"
@@ -421,7 +421,41 @@ function GDD() {
         </div>
       </section>
 
+      {/* Seção 10: UI Design */}
+      <section
+        id="ui-design"
+        className="bg-gray-dark text-text-secondary px-8 py-16"
+      >
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-text-main text-4xl font-serif font-bold tracking-widest uppercase mb-6">
+            ui design
+          </h2>
+          <div className="space-y-6 leading-relaxed text-pretty">
+            <p>
+              The interface makes strong use of ornamental frames, textured
+              buttons, and stylized cards to convey a sense of handcrafted
+              detail. Typography plays an important role in reinforcing this
+              theme: choosing serif fonts for their traditional, formal look
+              that echoes the tone of historical documents while maintaining
+              modern readability.
+            </p>
+            <p>
+              This visual system sets the tone for the player’s journey before
+              the chaos of gameplay begins, creating a sharp contrast between
+              the structured, satirical menu and the unpredictable action that
+              follows in the King’s court.
+            </p>
+          </div>
+        </div>
+      </section>
 
+      {/* Seção 11: Showcase Image */}
+      <section
+        id="ui-showcase"
+        className="w-full aspect-[3/1] bg-red-secondary-dark bg-cover bg-center" // <-- ALTERAÇÃO PRINCIPAL AQUI
+        style={{ backgroundImage: `url(${uiDesignImage})` }}
+      >
+      </section>
     </main>
   );
 }
