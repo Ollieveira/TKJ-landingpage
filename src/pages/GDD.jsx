@@ -6,6 +6,7 @@ import crownsImage from "../assets/double-icon-tkj.png";
 import background from "../assets/background-gdd.png";
 import gameplayImage from "../assets/background-gameplay.png";
 import uiDesignImage from "../assets/background-gdd-section11.png";
+import designSystemImage from "../assets/game-components.png";
 
 function GDD() {
   return (
@@ -452,9 +453,27 @@ function GDD() {
       {/* Seção 11: Showcase Image */}
       <section
         id="ui-showcase"
-        className="w-full aspect-[3/1] bg-red-secondary-dark bg-cover bg-center" // <-- ALTERAÇÃO PRINCIPAL AQUI
+        className="relative w-full aspect-[3/1] bg-red-secondary-dark bg-cover bg-center"
         style={{ backgroundImage: `url(${uiDesignImage})` }}
       >
+        <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-gray-dark to-transparent"></div>
+
+        <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-gray-background to-transparent"></div>
+      </section>
+
+      {/* Seção 12: Design System */}
+      <section id="design-system" className="bg-gray-background px-8 py-16">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-text-main text-4xl font-serif font-bold tracking-widest uppercase mb-12">
+            design system
+          </h2>
+
+          <img
+            src={designSystemImage}
+            alt="Design system do jogo The King's Jest"
+            className="w-full h-auto rounded-2xl"
+          />
+        </div>
       </section>
     </main>
   );
