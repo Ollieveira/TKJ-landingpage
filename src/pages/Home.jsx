@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import Header from "../components/Header";
 import InfoCard from "../components/InfoCard";
+import CallToActionBanner from "../components/CallToActionBanner";
 import iconNarrative from "../assets/narrative-driven-chaos-image.png";
 import iconPhysical from "../assets/physical-engagement.png";
 import iconPlayful from "../assets/playful-satirical-tone.png";
@@ -163,7 +163,7 @@ function Home() {
 
         <section
           id="catarse-section"
-          className="bg-red-main-dark py-16 md:py-24"
+          className="bg-red-main-dark py-16 md:py-24 relative"
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-5 gap-12 lg:gap-16 items-center">
@@ -203,6 +203,10 @@ function Home() {
               </div>
             </div>
           </div>
+          <CallToActionBanner />
+        </section>
+
+        <section className="bg-white-background-footer h-80">
         </section>
       </main>
     </>
