@@ -6,7 +6,7 @@ export default function CallToActionBanner() {
   return (
     <div
       id="cta-banner"
-      className="absolute left-1/2 -translate-x-1/2 -bottom-85 w-5xl aspect-[1235/490] bg-cover bg-center"
+      className="absolute left-1/2 -translate-x-1/2 -bottom-85 w-full max-w-5xl aspect-[1235/490] bg-cover bg-center"
       style={{ backgroundImage: `url(${bannerDownload})` }}
     >
       <div className="absolute inset-0 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
