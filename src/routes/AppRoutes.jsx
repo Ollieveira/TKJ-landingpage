@@ -3,6 +3,7 @@ import Home from "../pages/Home";
 import GDD from "../pages/GDD";
 import Help from "../pages/Help";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import ScrollToTop from "../components/ScrollToTop";
 
 export default function AppRoutes() {
@@ -15,6 +16,7 @@ export default function AppRoutes() {
         <Route path="/gdd" element={<GDD />} />
         <Route path="/help" element={<Help />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
