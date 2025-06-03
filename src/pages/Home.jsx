@@ -1,5 +1,10 @@
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
+import InfoCard from "../components/InfoCard";
+import iconNarrative from "../assets/narrative-driven-chaos-image.png";
+import iconPhysical from "../assets/physical-engagement.png";
+import iconPlayful from "../assets/playful-satirical-tone.png";
+import decorativeScrollImage from "../assets/what-is-kings-jest-scroll.png";
 import background from "../assets/home-banner.svg";
 import topScrollImage from "../assets/every-crown-needs-clown.png";
 import appStoreButtonImage from "../assets/app-store-button.png";
@@ -15,13 +20,14 @@ function Home() {
           id="home-banner"
           className="w-full aspect-[16/9] relative"
           style={{
-            backgroundImage: `url(${background}), linear-gradient(to bottom, var(--color-red-header, #701a0d), var(--color-red-main-light, #BA2A14))`, // Usando suas cores, ajuste os fallbacks
+            backgroundImage: `url(${background}), linear-gradient(to bottom, var(--color-red-header, #701a0d), var(--color-red-main-light, #BA2A14))`,
             backgroundSize: "cover, cover",
             backgroundPosition: "center, center",
             backgroundRepeat: "no-repeat, no-repeat",
           }}
         >
           <div className="absolute top-0 left-0 right-0 h-10 bg-gradient-to-b from-red-header to-transparent"></div>
+          <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-red-main-dark to-transparent"></div>
 
           <div className="flex flex-col items-center justify-center pt-10 md:pt-16 pb-8 px-4 text-center">
             <img
@@ -39,9 +45,7 @@ function Home() {
               to claim your place at court.
             </p>
 
-            <a
-              href="https://apps.apple.com/br/app/the-kings-jest/id6743722492"
-            >
+            <a href="https://apps.apple.com/br/app/the-kings-jest/id6743722492">
               <img
                 src={appStoreButtonImage}
                 alt="Download on the App Store"
@@ -49,22 +53,9 @@ function Home() {
               />
             </a>
 
-            <div className="relative w-full max-w-3xl lg:max-w-4xl">
-              <img
-                src={iPhoneMockupImage}
-                alt="iPhone mockup showing gameplay"
-                className=""
-              />
-              {/* <video
-                src={screenVideo}
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="absolute w-[88%] h-[91%] top-[4.5%] left-[6%] rounded-[6%/3%] object-cover"
-              ></video> */}
-            </div>
+            <img src={iPhoneMockupImage} alt="iPhone mockup showing gameplay" />
           </div>
+
           {/* <img
             src={jesterHead1}
             alt=""
@@ -85,6 +76,48 @@ function Home() {
             alt=""
             className="absolute bottom-[40%] right-[15%] w-12 h-12 md:w-16 md:h-16 opacity-80 transform rotate-12"
           /> */}
+        </section>
+
+        <section
+          id="the-kings-jest"
+          className="bg-red-main-dark py-16 md:py-24"
+        >
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
+            <div className="grid md:grid-cols-6 md:gap-12 lg:gap-16 items-center ">
+              <div className="md:col-span-3 space-y-6 mb-12 md:mb-0 ">
+                <img
+                  src={decorativeScrollImage}
+                  alt="What's The King of Jest?"
+                  className="h-12 w-auto md:h-14"
+                />
+                <h2 className="font-libra text-4xl md:text-5xl text-text-main text-pretty leading-tight">
+                  A Spectacle of Controlled Chaos
+                </h2>
+                <p className="text-text-secondary text-lg leading-relaxed text-pretty">
+                  Tilt, tap, and dive into chaotic rounds in a satirical world
+                  where unpredictability rules and the fun is always collective.
+                </p>
+              </div>
+
+              <div className="md:col-span-3 space-y-8 ">
+                <InfoCard
+                  iconSrc={iconNarrative}
+                  title="Narrative-Driven Chaos"
+                  description="The game offers quick and dynamic rounds that keep players engaged. Each match is designed to feel unpredictable, encouraging friendly competition and replayability."
+                />
+                <InfoCard
+                  iconSrc={iconPhysical}
+                  title="Physical Engagement"
+                  description="Players interact with the game by tilting, tapping, and moving their phones. This creates a shared physical experience that adds more energy and fun to each gameplay session."
+                />
+                <InfoCard
+                  iconSrc={iconPlayful}
+                  title="Playful & Satirical Tone"
+                  description="The game's style is lighthearted and visually expressive. Characters, animations, and environments support a playful atmosphere without distracting from the gameplay."
+                />
+              </div>
+            </div>
+          </div>
         </section>
 
         <nav className="space-x-4">
