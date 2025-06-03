@@ -4,7 +4,7 @@ import downloadAppImage from "../assets/download-image.png";
 
 export default function Header() {
   return (
-    <header className="bg-red-header w-full h-20 px-4 sm:px-8 flex items-center justify-between shadow-md">
+    <header className="bg-red-header w-full h-20 px-4 sm:px-20 flex items-center justify-between shadow-md">
       <Link to="/" aria-label="Página Inicial The King's Jest">
         <img
           src={logoImage}
@@ -16,6 +16,8 @@ export default function Header() {
       <a
         href="https://apps.apple.com/br/app/the-kings-jest/id6743722492"
         aria-label="Download do Aplicativo The King's Jest"
+        target="_blank"
+        className="hover:opacity-90 transition-opacity"
       >
         <img
           src={downloadAppImage}

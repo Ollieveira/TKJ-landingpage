@@ -48,7 +48,10 @@ function Home() {
               to claim your place at court.
             </p>
 
-            <a href="https://apps.apple.com/br/app/the-kings-jest/id6743722492">
+            <a
+              href="https://apps.apple.com/br/app/the-kings-jest/id6743722492"
+              target="_blank"
+            >
               <img
                 src={appStoreButtonImage}
                 alt="Download on the App Store"
@@ -123,7 +126,7 @@ function Home() {
           </div>
         </section>
 
-        <section className="bg-red-main-dark py-16 md:py-14">
+        <section id="gdd-section" className="bg-red-main-dark py-16 md:py-14">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-5 gap-12 lg:gap-16 items-center">
               <div className=" md:col-span-2 flex justify-center items-center">
@@ -180,6 +183,7 @@ function Home() {
                 </p>
                 <a
                   href="https://www.catarse.me/thekingsjest?ref=project_link"
+                  target="_blank"
                   className="inline-block hover:opacity-90 transition-opacity"
                 >
                   <img
@@ -200,15 +204,6 @@ function Home() {
             </div>
           </div>
         </section>
-
-        <nav className="space-x-4">
-          <Link to="/gdd" className="text-red-600 underline">
-            GDD
-          </Link>
-          <Link to="/help" className="text-blue-600 underline">
-            Ajuda
-          </Link>
-        </nav>
       </main>
     </>
   );
