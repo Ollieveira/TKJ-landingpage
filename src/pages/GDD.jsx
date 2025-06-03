@@ -18,7 +18,6 @@ import finalSceneImage from "../assets/finalSceneImage.png";
 function GDD() {
   return (
     <>
-      <Header />
       <main>
         {/* Seção 0: Banner */}
         <section
