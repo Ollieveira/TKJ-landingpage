@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/postcss' 
 import autoprefixer from 'autoprefixer'       
 export default defineConfig({
+  base: "/tkj-landingpage/",
   plugins: [react()],
   css: { 
     postcss: {
