@@ -21,11 +21,11 @@ function Home() {
       <main>
         <section
           id="home-banner"
-          className="w-full aspect-[16/9] relative"
+          className="w-full h-256 relative"
           style={{
             backgroundImage: `url(${background}), linear-gradient(to bottom, var(--color-red-header, #701a0d), var(--color-red-main-light, #BA2A14))`,
             backgroundSize: "cover, cover",
-            backgroundPosition: "center, center",
+            backgroundPosition: "bottom, center",
             backgroundRepeat: "no-repeat, no-repeat",
           }}
         >
@@ -43,10 +43,16 @@ function Home() {
               Escape a Dark Fate. Rise as the Kingdom's New Royal Fool.
             </h1>
 
-            <p className="text-text-secondary text-base md:text-lg max-w-xs md:max-w-xl mb-4 leading-relaxed text-pretty">
+            <p className="text-text-secondary text-base md:text-lg max-w-xs md:max-w-xl mb-8 leading-relaxed text-pretty">
               Download the app, confront your fate, and rise beyond your limits
               to claim your place at court.
             </p>
+
+            <img
+              src={iPhoneMockupImage}
+              alt="iPhone mockup showing gameplay"
+              className="mb-8"
+            />
 
             <a
               href="https://apps.apple.com/br/app/the-kings-jest/id6743722492"
@@ -58,8 +64,6 @@ function Home() {
                 className="h-14 md:h-16 w-auto hover:opacity-80 transition-opacity"
               />
             </a>
-
-            <img src={iPhoneMockupImage} alt="iPhone mockup showing gameplay" />
           </div>
 
           {/* <img
@@ -83,6 +87,8 @@ function Home() {
             className="absolute bottom-[40%] right-[15%] w-12 h-12 md:w-16 md:h-16 opacity-80 transform rotate-12"
           /> */}
         </section>
+
+        
 
         <section
           id="the-kings-jest"
@@ -206,8 +212,7 @@ function Home() {
           <CallToActionBanner />
         </section>
 
-        <section className="bg-white-background-footer h-80">
-        </section>
+        <section className="bg-white-background-footer h-80"></section>
       </main>
     </>
   );
