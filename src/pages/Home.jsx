@@ -7,7 +7,7 @@ import iconPlayful from "../assets/playful-satirical-tone.png";
 import decorativeScrollImage from "../assets/what-is-kings-jest-scroll.png";
 import background from "../assets/home-banner.svg";
 import topScrollImage from "../assets/every-crown-needs-clown.png";
-import appStoreButtonImage from "../assets/app-store-button.png";
+import appStoreButtonImage from "../assets/app-store-button.svg";
 import iPhoneMockupImage from "../assets/iphone-mockup.png";
 import catarseLogo from "../assets/catarse-image.png";
 import helpUsButtonScroll from "../assets/help-us-button.png";
