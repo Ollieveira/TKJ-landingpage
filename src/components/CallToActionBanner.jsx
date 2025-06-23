@@ -1,5 +1,5 @@
 import bannerDownload from "../assets/banner-download.png";
-import appStoreButtonImage from "../assets/app-store-button.png";
+import appStoreButtonImage from "../assets/app-store-button.svg";
 import qrCodeImage from "../assets/qr-code-tkj-appstore-jester.png";
 
 export default function CallToActionBanner() {

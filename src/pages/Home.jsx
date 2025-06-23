@@ -7,13 +7,16 @@ import iconPlayful from "../assets/playful-satirical-tone.png";
 import decorativeScrollImage from "../assets/what-is-kings-jest-scroll.png";
 import background from "../assets/home-banner.svg";
 import topScrollImage from "../assets/every-crown-needs-clown.png";
-import appStoreButtonImage from "../assets/app-store-button.png";
+import appStoreButtonImage from "../assets/app-store-button.svg";
 import iPhoneMockupImage from "../assets/iphone-mockup.png";
 import catarseLogo from "../assets/catarse-image.png";
 import helpUsButtonScroll from "../assets/help-us-button.png";
-import eventCrowdImage from "../assets/bgs-mockup.png";
+// import eventCrowdImage from "../assets/bgs-mockup.png";
+import eventCrowdImage from "../assets/retrocon-mockup.png";
 import gddBookImage from "../assets/gdd-image.png";
 import exploreGddButton from "../assets/gdd-explore-button.png";
+import storeBanner from "../assets/store-mockup.png";
+import downloadAppImage from "../assets/download-image.png";
 
 function Home() {
   return (
@@ -21,11 +24,11 @@ function Home() {
       <main>
         <section
           id="home-banner"
-          className="w-full aspect-[16/9] relative"
+          className="w-full h-256 relative"
           style={{
             backgroundImage: `url(${background}), linear-gradient(to bottom, var(--color-red-header, #701a0d), var(--color-red-main-light, #BA2A14))`,
             backgroundSize: "cover, cover",
-            backgroundPosition: "center, center",
+            backgroundPosition: "bottom, center",
             backgroundRepeat: "no-repeat, no-repeat",
           }}
         >
@@ -43,10 +46,16 @@ function Home() {
               Escape a Dark Fate. Rise as the Kingdom's New Royal Fool.
             </h1>
 
-            <p className="text-text-secondary text-base md:text-lg max-w-xs md:max-w-xl mb-4 leading-relaxed text-pretty">
+            <p className="text-text-secondary text-base md:text-lg max-w-xs md:max-w-xl mb-8 leading-relaxed text-pretty">
               Download the app, confront your fate, and rise beyond your limits
               to claim your place at court.
             </p>
+
+            <img
+              src={iPhoneMockupImage}
+              alt="iPhone mockup showing gameplay"
+              className="mb-8"
+            />
 
             <a
               href="https://apps.apple.com/br/app/the-kings-jest/id6743722492"
@@ -58,8 +67,6 @@ function Home() {
                 className="h-14 md:h-16 w-auto hover:opacity-80 transition-opacity"
               />
             </a>
-
-            <img src={iPhoneMockupImage} alt="iPhone mockup showing gameplay" />
           </div>
 
           {/* <img
@@ -82,6 +89,37 @@ function Home() {
             alt=""
             className="absolute bottom-[40%] right-[15%] w-12 h-12 md:w-16 md:h-16 opacity-80 transform rotate-12"
           /> */}
+        </section>
+
+        <section id="store-banner" className="bg-red-main-dark py-16 md:py-24">
+          <div className="flex flex-col items-center justify-center pt-10 md:pt-16 pb-8 px-4 text-center">
+            <h1 className="text-text-main text-4xl sm:text-5xl md:text-6xl font-libra leading-tight mb-4 max-w-6xl text-pretty">
+              Gather Your Friends and Compete for the King's Mercy
+            </h1>
+
+            <p className="text-text-secondary text-base md:text-lg max-w-xs md:max-w-xl mb-8 leading-relaxed text-pretty">
+              Discover the path that will lead you and your friends into madness
+              and to the highest rank of royal fools.
+            </p>
+
+            <a
+              href="https://apps.apple.com/br/app/the-kings-jest/id6743722492"
+              aria-label="Download do Aplicativo The King's Jest"
+              target="_blank"
+              className="hover:opacity-90 transition-opacity"
+            >
+              <img
+                src={downloadAppImage}
+                alt="Botão Download App"
+                className="h-12 md:h-14 w-auto mb-8"
+              />
+            </a>
+
+            <img
+              src={storeBanner}
+              alt="iPhone mockup showing gameplay"
+            />
+          </div>
         </section>
 
         <section
@@ -177,12 +215,13 @@ function Home() {
                   From Fools to Legends <br /> We Need Your Help
                 </h2>
                 <p className="text-text-secondary text-lg leading-relaxed text-pretty max-w-md mx-auto md:mx-0">
-                  With your support, we can showcase The King’s Jest at the
-                  biggest gaming event in Latin America. Let’s show the world
-                  that even fools deserve a throne.
+                  With your support, we can showcase The King's Jest at one of
+                  the biggest gaming event in Brazil. In 2025, we will be at
+                  RetroCon! Let’s show the world that even fools deserve a
+                  throne.
                 </p>
                 <a
-                  href="https://www.catarse.me/thekingsjest?ref=project_link"
+                  href="https://www.catarse.me/tkj_retrocon?ref=project_link"
                   target="_blank"
                   className="inline-block hover:opacity-90 transition-opacity"
                 >
@@ -206,8 +245,7 @@ function Home() {
           <CallToActionBanner />
         </section>
 
-        <section className="bg-white-background-footer h-80">
-        </section>
+        <section className="bg-white-background-footer h-80"></section>
       </main>
     </>
   );
