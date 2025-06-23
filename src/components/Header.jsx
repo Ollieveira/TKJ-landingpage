@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import logoImage from "../assets/logo.png";
-import downloadAppImage from "../assets/download-image.png";
+import downloadAppImage from "../assets/supportus-image.png";
 
 export default function Header() {
   return (
@@ -14,8 +14,8 @@ export default function Header() {
       </Link>
 
       <a
-        href="https://apps.apple.com/br/app/the-kings-jest/id6743722492"
-        aria-label="Download do Aplicativo The King's Jest"
+        href="https://www.catarse.me/tkj_retrocon?ref=project_link"
+        aria-label="Ajude-nos fazendo uma doação no Catarse"
         target="_blank"
         className="hover:opacity-90 transition-opacity"
       >
