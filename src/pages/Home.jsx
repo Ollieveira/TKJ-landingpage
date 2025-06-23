@@ -11,7 +11,8 @@ import appStoreButtonImage from "../assets/app-store-button.svg";
 import iPhoneMockupImage from "../assets/iphone-mockup.png";
 import catarseLogo from "../assets/catarse-image.png";
 import helpUsButtonScroll from "../assets/help-us-button.png";
-import eventCrowdImage from "../assets/bgs-mockup.png";
+// import eventCrowdImage from "../assets/bgs-mockup.png";
+import eventCrowdImage from "../assets/retrocon-mockup.png";
 import gddBookImage from "../assets/gdd-image.png";
 import exploreGddButton from "../assets/gdd-explore-button.png";
 import storeBanner from "../assets/store-mockup.png";
@@ -117,7 +118,6 @@ function Home() {
             <img
               src={storeBanner}
               alt="iPhone mockup showing gameplay"
-              className="mb-8"
             />
           </div>
         </section>
@@ -221,7 +221,7 @@ function Home() {
                   throne.
                 </p>
                 <a
-                  href="https://www.catarse.me/thekingsjest?ref=project_link"
+                  href="https://www.catarse.me/tkj_retrocon?ref=project_link"
                   target="_blank"
                   className="inline-block hover:opacity-90 transition-opacity"
                 >
