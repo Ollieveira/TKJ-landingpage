@@ -1,4 +1,3 @@
-import Header from "../components/Header";
 import Tag from "../components/Tag";
 import PillarCard from "../components/PillarCard";
 import FeatureHighlight from "../components/FeatureHighlight";
