@@ -20,7 +20,7 @@ const formatTime = (interval) => {
   )}:${String(deciseconds).padStart(2, "0")}`;
 };
 
-const Leaderboard = () => {
+const   Leaderboard = () => {
   const [scores, setScores] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -60,7 +60,7 @@ const Leaderboard = () => {
 
   return (
     <div className="w-full max-w-5xl mx-auto p-4 md:p-8">
-      <h1 className="text-5xl md:text-6xl font-bold text-center text-white mb-8 text-shadow-lg">
+      <h1 className="text-5xl md:text-6xl font-bold text-center font-libra text-text-main mb-8 text-shadow-lg">
         🏆 RANKING GERAL 🏆
       </h1>
       <div className="space-y-4">
@@ -68,15 +68,15 @@ const Leaderboard = () => {
           // Usamos o id do documento do Firebase como 'key', que é um identificador único perfeito.
           <div
             key={entry.id}
-            className="flex justify-between items-center bg-gray-800 p-5 rounded-lg border-2 border-gray-700 shadow-xl"
+            className="flex justify-between items-center bg-red-900 p-5 rounded-lg border-2 border-red-400 shadow-xl"
           >
-            <span className="text-3xl font-bold text-purple-400 w-16">
+            <span className="text-3xl font-bold text-yellow w-16">
               #{index + 1}
             </span>
-            <span className="text-3xl text-white flex-grow">
+            <span className="text-3xl text-text-secondary font-libra flex-grow">
               {entry.playerScore.playerName}
             </span>
-            <span className="text-3xl font-mono text-cyan-400 w-48 text-right">
+            <span className="text-3xl font-mono text-yellow w-48 text-right">
               {formatTime(entry.playerScore.finishTime)}
             </span>
             <span className="text-3xl text-red-400 w-48 text-right">
