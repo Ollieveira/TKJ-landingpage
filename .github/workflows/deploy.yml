@@ -30,9 +30,8 @@ jobs:
         run: npm install # Instala as dependências do package.json
 
       - name: Build project
-        run: npm run build # Roda o comando de build (vai criar a pasta /dist)
+        run: npm run build # Roda o comando de build
         env:
-          VITE_FIREBASE_API_KEY: ${{ secrets.VITE_FIREBASE_API_KEY }}
           VITE_FIREBASE_API_KEY: ${{ secrets.VITE_FIREBASE_API_KEY }}
           VITE_FIREBASE_AUTH_DOMAIN: ${{ secrets.VITE_FIREBASE_AUTH_DOMAIN }}
           VITE_FIREBASE_PROJECT_ID: ${{ secrets.VITE_FIREBASE_PROJECT_ID }}
