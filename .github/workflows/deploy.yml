@@ -16,6 +16,11 @@ permissions:
 # Tarefas (jobs) a serem executadas
 jobs:
   deploy:
+    # AQUI ESTÁ A CORREÇÃO CRUCIAL
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    
     runs-on: ubuntu-latest # Usar uma máquina virtual Linux
     steps:
       - name: Checkout repository
