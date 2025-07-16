@@ -5,6 +5,18 @@
     <link rel="icon" href="./src/assets/TKJ-icon-no-background.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The King's Jest</title>
+
+    <script type="text/javascript">
+      // Script para lidar com o redirecionamento do 404.html
+      (function () {
+        var params = new URLSearchParams(window.location.search);
+        var redirectPath = params.get("p");
+        if (redirectPath) {
+          // Usa o History API para corrigir a URL sem recarregar a página
+          window.history.replaceState(null, "", "/" + redirectPath);
+        }
+      })();
+    </script>
   </head>
   <body class="overscroll-none">
     <div id="root"></div>

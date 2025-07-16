@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>The King's Jest - Redirecting...</title>
+    <script type="text/javascript">
+      // Pega o caminho da URL que causou o erro 404
+      var path = window.location.pathname;
+
+      // Monta a nova URL para redirecionamento
+      // Usa sessionStorage para evitar loops de redirecionamento infinitos
+      var sessionKey = "redirect_path";
+      var storedPath = sessionStorage.getItem(sessionKey);
+
+      if (storedPath !== path) {
+        sessionStorage.setItem(sessionKey, path);
+        // Redireciona para o index.html, passando o caminho original
+        // como um parâmetro de busca (query parameter).
+        window.location.replace("/" + "?p=" + path.substring(1));
+      } else {
+        // Se já tentamos redirecionar e falhamos, limpamos para tentar de novo no futuro
+        sessionStorage.removeItem(sessionKey);
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
