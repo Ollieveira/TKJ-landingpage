@@ -123,12 +123,12 @@ const Leaderboard = () => {
   return (
     <div className="w-full max-w-5xl mx-auto p-4 md:p-8">
       <h1 className="text-5xl md:text-6xl font-bold text-center text-text-main font-libra mb-8 text-shadow-lg">
-        🏆 RANKING GERAL 🏆
+        🏆 OVERALL RANKING 🏆
       </h1>
 
       {loading ? (
         <div className="text-text-main font-libra text-3xl text-center">
-          Carregando Ranking...
+          Loading Ranking...
         </div>
       ) : (
         <>
@@ -149,7 +149,7 @@ const Leaderboard = () => {
                   {formatTime(entry.playerScore.finishTime)}
                 </span>
                 <span className="text-3xl text-red-400 w-48 text-right">
-                  {entry.playerScore.deaths} Mortes
+                  {entry.playerScore.deaths} Deaths
                 </span>
               </div>
             ))}
@@ -162,17 +162,17 @@ const Leaderboard = () => {
               disabled={page === 1 || loading}
               className="bg-red-main-light text-text-main font-bold py-2 px-6 rounded-lg disabled:bg-gray-600 disabled:cursor-not-allowed hover:bg-red-main-dark transition-colors"
             >
-              Anterior
+              Previous
             </button>
             <span className="text-white text-xl font-semibold">
-              Página {page}
+              Page {page}
             </span>
             <button
               onClick={handleNextPage}
               disabled={isLastPage || loading}
               className="bg-red-main-light text-white font-bold py-2 px-6 rounded-lg disabled:bg-gray-600 disabled:cursor-not-allowed hover:bg-red-main-dark transition-colors"
             >
-              Próximo
+              Next
             </button>
           </div>
         </>
