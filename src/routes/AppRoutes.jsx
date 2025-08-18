@@ -2,10 +2,11 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "../pages/Home";
 import GDD from "../pages/GDD";
 import Help from "../pages/Help";
+import Leaderboard from "../pages/LeaderboardPage";
+import Linktree from "../pages/Linktree";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ScrollToTop from "../components/ScrollToTop";
-import Leaderboard from "../pages/LeaderboardPage";
 
 export default function AppRoutes() {
   return (
@@ -17,6 +18,7 @@ export default function AppRoutes() {
         <Route path="/gdd" element={<GDD />} />
         <Route path="/help" element={<Help />} />
         <Route path="/leaderboard" element={<Leaderboard />} />
+        <Route path="/linktree" element={<Linktree/>} />
       </Routes>
       <Footer />
     </Router>
