@@ -17,7 +17,7 @@ export default function Linktree() {
     x: "https://x.com/kingsjestgame",
     tiktok:
       "https://www.tiktok.com/@the.kings.jest?is_from_webapp=1&sender_device=pc",
-    discord: "https://discord.gg/xAZeUjBp5K",
+    discord: "https://discord.gg/Yyj5DSnVNa",
   };
   const downloadLinks = {
     appStore: "https://apps.apple.com/br/app/the-kings-jest/id6743722492",
