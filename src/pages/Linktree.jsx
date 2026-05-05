@@ -28,11 +28,6 @@ export default function Linktree() {
 
   return (
     <div className="bg-black text-white min-h-screen flex items-center justify-center font-sans">
-      {/*
-       * Layout mobile  : coluna única, visível até 425 px  (classe "linktree-mobile")
-       * Layout desktop : duas colunas, visível acima de 425 px (classe "linktree-desktop")
-       * As classes de responsividade são definidas no bloco <style> abaixo.
-       */}
 
       <style>{`
         .linktree-mobile  { display: flex; }
