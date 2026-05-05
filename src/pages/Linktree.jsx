@@ -1,9 +1,10 @@
 import SocialLink from "../components/SocialLink";
 
 import logoImage from "../assets/logo.png";
-import appStoreImage from "../assets/app-store-button.svg";
-import qrCodeImage from "../assets/qr-code-tkj-appstore-jester.png";
-import androidFreeKeyImage from "../assets//free-key-android.png";
+import appStoreBadge from "../assets/en-apple-badge-download.svg";
+import playStoreBadge from "../assets/en-google-badge-download.svg";
+import iosQrCode from "../assets/ios-qr-code-tkj.png";
+import androidQrCode from "../assets/android-qr-code-tkj.png";
 
 import instagramIconSrc from "../assets/SocialMediasIcons/instagram.svg";
 import xIconSrc from "../assets/SocialMediasIcons/twitter-alt.svg";
@@ -21,19 +22,37 @@ export default function Linktree() {
   };
   const downloadLinks = {
     appStore: "https://apps.apple.com/br/app/the-kings-jest/id6743722492",
-    androidKey: "https://docs.google.com/forms/d/e/1FAIpQLSeYWpmbRd680dI6SwZERYwNfdtxsuCSOMy3azgYX3sePDjZQA/viewform?usp=sharing&ouid=109247685531015344942",
-  }
+    googlePlay:
+      "https://play.google.com/store/apps/details?id=com.JestersCompany.TheKingsJest",
+  };
 
   return (
     <div className="bg-black text-white min-h-screen flex items-center justify-center font-sans">
-      {/* --- Visualização Mobile --- */}
-      <div className="w-full max-w-sm p-8 md:hidden">
+      {/*
+       * Layout mobile  : coluna única, visível até 425 px  (classe "linktree-mobile")
+       * Layout desktop : duas colunas, visível acima de 425 px (classe "linktree-desktop")
+       * As classes de responsividade são definidas no bloco <style> abaixo.
+       */}
+
+      <style>{`
+        .linktree-mobile  { display: flex; }
+        .linktree-desktop { display: none; }
+
+        @media (min-width: 426px) {
+          .linktree-mobile  { display: none; }
+          .linktree-desktop { display: flex; }
+        }
+      `}</style>
+
+      {/* ── MOBILE (≤ 425 px) ── */}
+      <div className="linktree-mobile w-full max-w-sm p-8 flex-col">
         <img
           src={logoImage}
           alt="The King's Jest Logo"
           className="h-16 w-auto mb-10"
         />
-          <div className="flex flex-col items-start space-y-6">
+
+        <div className="flex flex-col items-start space-y-6">
           <SocialLink
             href={socialLinks.instagram}
             iconSrc={instagramIconSrc}
@@ -55,43 +74,47 @@ export default function Linktree() {
             text="Join our server!"
           />
         </div>
-        <hr className="text-white my-8" />
+
+        <hr className="border-white my-8" />
+
         <a
           href={`mailto:${email}`}
           className="text-white hover:text-gray-300 transition-colors"
         >
-          <h3 className="text-2xl font-bold mb-4">Contact Us</h3>
+          <h3 className="text-2xl font-bold mb-6">Contact Us</h3>
         </a>
-        <div className="flex flex-col items-start gap-4">
-          <a
-            href={downloadLinks.androidKey}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src={androidFreeKeyImage}
-              alt="Get the FREE Android access key!"
-              className="h-14 w-auto hover:opacity-80 transition-opacity"
-            />
-          </a>
 
+        {/* Badges — App Store e Google Play */}
+        <div className="flex flex-col items-start gap-4">
           <a
             href={downloadLinks.appStore}
             target="_blank"
             rel="noopener noreferrer"
           >
             <img
-              src={appStoreImage}
+              src={appStoreBadge}
               alt="Download on the App Store"
               className="h-14 w-auto hover:opacity-80 transition-opacity"
             />
           </a>
-        </div>{" "}
+          <a
+            href={downloadLinks.googlePlay}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={playStoreBadge}
+              alt="Get it on Google Play"
+              className="h-14 w-auto hover:opacity-80 transition-opacity"
+            />
+          </a>
+        </div>
       </div>
 
-      {/* --- Visualização Desktop --- */}
-      <div className="hidden md:flex w-full max-w-4xl p-8 items-center justify-between gap-16">
-        {/* Coluna da Esquerda */}
+      {/* ── DESKTOP (> 425 px) ── */}
+      <div className="linktree-desktop w-full max-w-4xl p-8 items-start justify-between gap-16">
+
+        {/* Coluna Esquerda */}
         <div className="w-1/2">
           <img
             src={logoImage}
@@ -99,7 +122,7 @@ export default function Linktree() {
             className="h-20 w-auto mb-12"
           />
 
-            <div className="flex flex-col items-start space-y-8">
+          <div className="flex flex-col items-start space-y-8">
             <SocialLink
               href={socialLinks.instagram}
               iconSrc={instagramIconSrc}
@@ -122,38 +145,63 @@ export default function Linktree() {
             />
           </div>
 
-          <hr className="text-white my-8" />
+          <hr className="border-white my-8" />
 
           <a
             href={`mailto:${email}`}
             className="text-white hover:text-gray-300 transition-colors"
           >
-            <h3 className="text-2xl font-bold mb-4">Contact Us</h3>
+            <h3 className="text-2xl font-bold">Contact Us</h3>
           </a>
         </div>
 
-        {/* Coluna da Direita (QR Code) */}
-        <div className="w-1/2 flex flex-col items-center justify-center gap-4">
-          <img
-            src={qrCodeImage}
-            alt="QR Code for App Store Download"
-            className="w-64 h-64"
-          />
-          <p className="text-gray-400 font-semibold mb-6">
-            Scan to download on the App Store
+        {/* Coluna Direita — QR Codes + Badges */}
+        <div className="w-1/2 flex flex-col items-center justify-center gap-6">
+          <p className="text-gray-400 font-semibold text-sm tracking-wide uppercase">
+            Scan to download
           </p>
 
-          <a
-            href={downloadLinks.androidKey}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src={androidFreeKeyImage}
-              alt="Get the FREE Android access key!"
-              className="h-14 w-auto hover:opacity-80 transition-opacity"
-            />
-          </a>
+          <div className="flex items-start justify-center gap-8">
+            {/* iOS */}
+            <div className="flex flex-col items-center gap-3">
+              <img
+                src={iosQrCode}
+                alt="QR Code — Download on the App Store"
+                className="w-36 h-36"
+              />
+              <a
+                href={downloadLinks.appStore}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={appStoreBadge}
+                  alt="Download on the App Store"
+                  className="h-10 w-auto hover:opacity-80 transition-opacity"
+                />
+              </a>
+            </div>
+
+            {/* Android */}
+            <div className="flex flex-col items-center gap-3">
+              <img
+                src={androidQrCode}
+                alt="QR Code — Get it on Google Play"
+                className="w-36 h-36"
+              />
+              <a
+                href={downloadLinks.googlePlay}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={playStoreBadge}
+                  alt="Get it on Google Play"
+                  className="h-10 w-auto hover:opacity-80 transition-opacity"
+                />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
